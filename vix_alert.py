@@ -39,7 +39,7 @@ import os
 DISCORD_WEBHOOK_URL = os.environ.get("DISCORD_WEBHOOK_URL")
 VIX_THRESHOLD = 0.50          # Seuil de déclenchement (+50 %)
 HOLDING_TRADING_DAYS = 30     # Durée de détention en jours de bourse
-TEST_MODE = True              # Laisser à True pour ton test, puis repasser à False
+TEST_MODE = False             # Laisser à True pour ton test, puis repasser à False
 
 
 def get_market_data():
