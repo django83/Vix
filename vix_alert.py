@@ -38,7 +38,7 @@ from datetime import datetime
 DISCORD_WEBHOOK_URL = "COLLE_TON_URL_WEBHOOK_DISCORD_ICI"
 VIX_THRESHOLD = 0.50          # Seuil de déclenchement (+50 %)
 HOLDING_TRADING_DAYS = 30     # Durée de détention en jours de bourse
-TEST_MODE = False             # Passer à True pour tester l'envoi Discord immédiatement
+TEST_MODE = True            # Passer à True pour tester l'envoi Discord immédiatement
 
 
 def get_market_data():
