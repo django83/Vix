@@ -1,0 +1,19 @@
+name: VIX Alert Check
+
+on:
+  schedule:
+    # 16h15 UTC et 20h45 UTC (adapter selon heure d'été/hiver)
+    - cron: '15 16 * * 1-5'
+    - cron: '45 20 * * 1-5'
+  workflow_dispatch: # Permet de lancer un test manuel en 1 clic
+
+jobs:
+  run-script:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install yfinance pandas requests
+      - run: python vix_alert.py
