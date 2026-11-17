@@ -33,12 +33,13 @@ import yfinance as yf
 import pandas as pd
 import requests
 from datetime import datetime
+import os
 
 # --- CONFIGURATION ---
-DISCORD_WEBHOOK_URL = "COLLE_TON_URL_WEBHOOK_DISCORD_ICI"
+DISCORD_WEBHOOK_URL = os.environ.get("DISCORD_WEBHOOK_URL")
 VIX_THRESHOLD = 0.50          # Seuil de déclenchement (+50 %)
 HOLDING_TRADING_DAYS = 30     # Durée de détention en jours de bourse
-TEST_MODE = True            # Passer à True pour tester l'envoi Discord immédiatement
+TEST_MODE = True              # Laisser à True pour ton test, puis repasser à False
 
 
 def get_market_data():
